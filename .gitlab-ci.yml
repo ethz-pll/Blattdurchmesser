@@ -4,6 +4,5 @@ build:
   script:
     - echo Verifying
     - make hex
-    - ./arduino-1.6.9/arduino --verify --board arduino:avr:uno 
-sketch/sketch.ino
+    - ./arduino-1.6.9/arduino --verify --board arduino:avr:uno sketch/sketch.ino
     - ino build
