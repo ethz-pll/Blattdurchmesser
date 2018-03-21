@@ -1,16 +1,32 @@
 /*     Simple Stepper Motor Control Exaple Code
- *      
+ *
  *  by Dejan Nedelkovski, www.HowToMechatronics.com
  *  http://howtomechatronics.com/tutorials/arduino/how-to-control-stepper-motor-with-a4988-driver-and-arduino/
- *  
- *  stepper: 360 deg by 200 steps -> 1.8 deg by step
- *  screw: 8 mm on 10 turns -> 0.8 mm by turn
+ *
+ *  stepper: 360 deg by 200 steps -> 1.8 deg per step
+ *  screw: 8 mm on 10 turns -> 0.8 mm per turn
  *  -> 0.8/200 = 0.004 mm by step
- *  
+ *
  *  Test show typical accuracy with PM-64 is <= 50um per try.
- *  
+ *
  * !!! Ablauf: siehe Flussdiagramm Hansjakob !!!
- *  
+ *
+ * FreeRTOS + stepper motor:
+ * - see "Example 6. Combining blocking and non-blocking tasks"
+ *   https://www.freertos.org/Documentation/161204_Mastering_the_FreeRTOS_Real_Time_Kernel-A_Hands-On_Tutorial_Guide.pdf
+ *
+ * Stepper libs:
+ * - need; A4988 support, exact step-by-step move, position, non-blocking (FreeRTOS)
+ * - nice to have: acceleration
+ * - look at https://github.com/laurb9/StepperDriver
+ *           https://github.com/waspinator/AccelStepper
+ *           https://www.arduino.cc/en/Reference/Stepper
+ * - if not available write own or enhance given one
+ *
+ * PCB:
+ * - Arduino UNO eagle footprint
+ *   https://github.com/adafruit/Adafruit-Eagle-Library
+ *
  */
 // defines pins numbers
 #define stepPin  3  // stepper motor control
