@@ -9,6 +9,8 @@
  *  
  *  Test show typical accuracy with PM-64 is <= 50um per try.
  *  
+ * !!! Ablauf: siehe Flussdiagramm Hansjakob !!!
+ *  
  */
 // defines pins numbers
 #define stepPin  3  // stepper motor control
@@ -32,12 +34,15 @@ void setup() {
 
   digitalWrite(LED_BUILTIN, HIGH);
 
-  digitalWrite(dirPin,HIGH); // Enables the motor to move in a particular direction
+  digitalWrite(dirPin,HIGH); // AWAY/DOWN; Enables the motor to move in a particular direction
+//  digitalWrite(dirPin,LOW); // BACK/UP; Enables the motor to move in a particular direction
   const int turns =  random(1, 5);
   Serial.println(turns);
   Serial.println(turns * 200);
-  // Makes 200 pulses for making one full cycle rotation
-  for(int x = 0; x < (200 * turns); x++) {
+//  // Makes 200 pulses for making one full cycle rotation
+//  for(int x = 0; x < (200 * turns); x++) {
+  // Makes pulses for visibly moving the sledge in a direction
+  for(int x = 0; x < (1000 * turns); x++) {
     digitalWrite(stepPin,HIGH); 
     delayMicroseconds(500); 
     digitalWrite(stepPin,LOW); 
@@ -45,6 +50,7 @@ void setup() {
   }
   delay(1000); // One second delay
 
+/*
   digitalWrite(dirPin,LOW); //Changes the rotations direction
 //  digitalWrite(dirPin,HIGH); // Enables the motor to move in a particular direction
   // Makes 400 pulses for making two full cycle rotation
@@ -56,12 +62,13 @@ void setup() {
       Serial.println(((turns * 200)-x)*0.004*1000);
       Serial.println("done");
       break;
-    }/**/
+    }
     digitalWrite(stepPin,HIGH);
     delayMicroseconds(500);
     digitalWrite(stepPin,LOW);
     delayMicroseconds(500);
   }
+*/
 
   digitalWrite(LED_BUILTIN, LOW);
 }
