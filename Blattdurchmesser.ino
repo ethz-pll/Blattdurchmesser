@@ -10,6 +10,7 @@
  *  Test show typical accuracy with PM-64 is <= 50um per try.
  *
  * !!! Ablauf: siehe Flussdiagramm Hansjakob !!!
+ * !!! Kupplung Spindel - Motor: flexible Kupplung !!!
  *
  * FreeRTOS + stepper motor:
  * - see "Example 6. Combining blocking and non-blocking tasks"
@@ -23,9 +24,18 @@
  *           https://www.arduino.cc/en/Reference/Stepper
  * - if not available write own or enhance given one
  *
+ * OLED lib:
+ * - SSD1306 only: https://github.com/greiman/SSD1306Ascii
+ * - SSD1306, SH1106: https://github.com/stanleyhuangyc/MultiLCD
+ * - look at https://forum.arduino.cc/index.php?topic=256374.0
+ *
  * PCB:
  * - Arduino UNO eagle footprint
  *   https://github.com/adafruit/Adafruit-Eagle-Library
+ * Schema:
+ * - idee hansjakob nur software gesteuerte sicherheit (1 mikroschalter)
+ * - idee ursin relais um stromlos zu machen auch auf pcb vorsehen/einbauen
+ *   (beides ideen auf print; nutzung idee ursin optional - bestücken und verdrahten)
  *
  */
 // defines pins numbers
@@ -50,9 +60,10 @@ void setup() {
 
   digitalWrite(LED_BUILTIN, HIGH);
 
-  digitalWrite(dirPin,HIGH); // AWAY/DOWN; Enables the motor to move in a particular direction
-//  digitalWrite(dirPin,LOW); // BACK/UP; Enables the motor to move in a particular direction
-  const int turns =  random(1, 5);
+  digitalWrite(dirPin,HIGH); // BACK/UP; Enables the motor to move in a particular direction
+//  digitalWrite(dirPin,LOW); // AWAY/DOWN; Enables the motor to move in a particular direction
+//  const int turns =  random(1, 5);
+  const int turns = 1;
   Serial.println(turns);
   Serial.println(turns * 200);
 //  // Makes 200 pulses for making one full cycle rotation
