@@ -1,0 +1,3 @@
+[submodule "Information/linear-power-supply"]
+	path = Information/linear-power-supply
+	url = https://gitlab.ethz.ch/usoler/linear-power-supply.git
