@@ -38,13 +38,73 @@
  *   (beides ideen auf print; nutzung idee ursin optional - bestücken und verdrahten)
  *
  */
+
+#define SERIAL_OUTPUT  // enable verbose serial output
+
 // defines pins numbers
-#define stepPin  3  // stepper motor control
-#define dirPin   4  // stepper motor control
+#define stepPin  3  // stepper motor control STEP
+#define dirPin   4  // stepper motor control DIR
+
 #define optoPin  2  // optical sensor reading (int possible)
+
 #define distpstp 0.004  // 0.004 mm per step
- 
+
 void setup() {
+  // Init/Setup
+  // Define/Configure pins as input, output, etc.
+#ifdef SERIAL_OUTPUT
+  Serial.begin(9600);
+
+  // http://www.instructables.com/id/Arduino-Lesser-Known-Features/
+  Serial.println("SOFTWARE:");
+  Serial.println(__DATE__); // compilation date
+  Serial.println(__TIME__); // compilation time
+  String stringOne = String(ARDUINO, DEC);
+  Serial.println(stringOne); // arduino ide version
+  Serial.println(__VERSION__); // gcc version
+  Serial.println(__FILE__); // file compiled
+#endif
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+  //pinMode(optoPin, INPUT);       // use as interrupt?
+  pinMode(optoPin, INPUT_PULLUP);  // pull-up to allow check for sensor existence
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  // System Self-Test
+// TODO: also report errors to OLED as human-readable message
+  bool selftest = true;
+  // (test is optical sensor powered?)
+  selftest = selftest && (!digitalRead(optoPin));  // test is optical sensor connected and free?
+  // test is mechanical sensor powered?
+  // test are optical and mechanical sensors free?
+  selftest = selftest && (!digitalRead(optoPin));  // test is optical sensor connected/powered and free?
+  // test is stepper powered?
+  // test is stepper functional?
+#ifdef SERIAL_OUTPUT
+  Serial.println("RUN:");
+  Serial.print("System Self-Test: ");
+  Serial.println(selftest);
+#endif
+
+  // Check current status and decide what to do as next step
+  // - ...
+
+  // System Init, Self-Test and ... SUCCESSFUL: blink 3 times
+  digitalWrite(LED_BUILTIN, HIGH);  // LED on
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);   // LED off
+  delay(500);
+  digitalWrite(LED_BUILTIN, HIGH);  // LED on
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);   // LED off
+  delay(500);
+  digitalWrite(LED_BUILTIN, HIGH);  // LED on
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);   // LED off
+}
+void loop() {}
+/*
+
   // if analog input pin 0 is unconnected, random analog
   // noise will cause the call to randomSeed() to generate
   // different seed numbers each time the sketch runs.
@@ -95,7 +155,7 @@ void setup() {
     digitalWrite(stepPin,LOW);
     delayMicroseconds(500);
   }
-*/
+x/
 
   digitalWrite(LED_BUILTIN, LOW);
 }
@@ -118,9 +178,10 @@ void loop() {
     delayMicroseconds(500);
     digitalWrite(stepPin,LOW);
     delayMicroseconds(500);
-  }*/
+  }x/
   delay(1000);
 
   Serial.println(digitalRead(optoPin));
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
 }
+*/
