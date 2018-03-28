@@ -1,0 +1,21 @@
+
+I would like to use features like CI (continous integration) keep a copy/mirror on e.g. github and more.
+
+ETHZ GitLab could (and may be already does) support such features but I do not understand how this works.
+
+Maintaining a copy/mirror (more precise: with 2 remotes overloaded origin) on GitHub also allows
+to use GitLab and GitHub together and by that all the nice featurs on GitHub.
+https://steveperkins.com/migrating-projects-from-github-to-gitlab/
+
+Option 2: Overload Origin with Both Remotes (needs one single pull/push only);
+$ git remote set-url --add origin https://github.com/drtrigon/ethz-pll-Blattdurchmesser.git
+
+https://gitlab.ethz.ch/PLL/Blattdurchmesser
+https://github.com/drtrigon/ethz-pll-Blattdurchmesser
+
+Enable Travis CI for a Repository (for Arduino)
+https://learn.adafruit.com/continuous-integration-arduino-and-you/testing-your-project
+
+Login to Travis-CI using the GitHub account and enable Travis-CI for the given repo.
+
+Add a .travis.yml file to your project, commit and push.
