@@ -1,20 +1,27 @@
 language: c
+env:
+  global:
+    #- ARDUINO_VERSION=1.6.5
+    - ARDUINO_VERSION=1.8.1
+  matrix:
+    - BOARD="arduino:avr:uno"
 before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16"
   - sleep 3
   - export DISPLAY=:1.0
-  - wget http://downloads.arduino.cc/arduino-1.8.1-linux64.tar.xz
-  - tar xf arduino-1.8.1-linux64.tar.xz
-  - sudo mv arduino-1.8.1 /usr/local/share/arduino
+  - wget http://downloads.arduino.cc/arduino-$ARDUINO_VERSION-linux64.tar.xz
+  - tar xf arduino-$ARDUINO_VERSION-linux64.tar.xz
+  - sudo mv arduino-$ARDUINO_VERSION /usr/local/share/arduino
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
   - sudo apt-get install tree
 #install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
 #  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
 script:
-  - ls -la
+  #- ls -la
   - tree
-  - arduino --verify --board arduino:avr:uno --verbose $PWD/Blattdurchmesser.ino
+  #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
+  - arduino --verify --board $BOARD --verbose $PWD/Blattdurchmesser.ino
 #notifications:
 #  email:
 #    on_success: change
