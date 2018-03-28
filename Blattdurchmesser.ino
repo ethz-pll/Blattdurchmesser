@@ -42,10 +42,12 @@
 #define SERIAL_OUTPUT  // enable verbose serial output
 
 // defines pins numbers
-#define stepPin  3  // stepper motor control STEP
-#define dirPin   4  // stepper motor control DIR
+#define stepPin    3  // stepper motor control STEP
+#define dirPin     4  // stepper motor control DIR
 
-#define optoPin  2  // optical sensor reading (int possible)
+#define optoPin    2  // optical sensor reading (int possible)
+#define swchPinA   9  // mechanical sensor reading (int possible)
+#define swchPinB  10  // mechanical sensor reading (int possible)
 
 #define distpstp 0.004  // 0.004 mm per step
 
@@ -66,18 +68,22 @@ void setup() {
 #endif
   pinMode(stepPin, OUTPUT);
   pinMode(dirPin, OUTPUT);
-  //pinMode(optoPin, INPUT);       // use as interrupt?
-  pinMode(optoPin, INPUT_PULLUP);  // pull-up to allow check for sensor existence
+  //pinMode(optoPin, INPUT);        // use as interrupt?
+  pinMode(optoPin, INPUT_PULLUP);   // pull-up to allow check for sensor existence
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(swchPinA, INPUT_PULLUP);  // pull-up to allow check for sensor existence
+  pinMode(swchPinB, INPUT_PULLUP);  // pull-up to allow check for sensor existence
 
   // System Self-Test
 // TODO: also report errors to OLED as human-readable message
   bool selftest = true;
   // (test is optical sensor powered?)
-  selftest = selftest && (!digitalRead(optoPin));  // test is optical sensor connected and free?
+// TODO: use both contacts (closed/open) for self-test as with mechanical switch, see below
+  selftest = selftest && (!digitalRead(optoPin));    // test is optical sensor connected and free?
   // test is mechanical sensor powered?
+  selftest = selftest && (digitalRead(swchPinA)
+                      && (!digitalRead(swchPinB)));  // test is mechanical sensor connected and free?
   // test are optical and mechanical sensors free?
-  selftest = selftest && (!digitalRead(optoPin));  // test is optical sensor connected/powered and free?
   // test is stepper powered?
   // test is stepper functional?
 #ifdef SERIAL_OUTPUT

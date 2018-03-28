@@ -18,4 +18,6 @@ https://learn.adafruit.com/continuous-integration-arduino-and-you/testing-your-p
 
 Login to Travis-CI using the GitHub account and enable Travis-CI for the given repo.
 
-Add a .travis.yml file to your project, commit and push.
+Add a .travis.yml file to your project, commit, pull/push and enjoy.
+
+This travis file supports Arduino IDE 1.6.5 only we use 1.8.2.
