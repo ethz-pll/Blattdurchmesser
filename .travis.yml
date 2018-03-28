@@ -11,7 +11,9 @@ before_install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
 #  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
 script:
-  - arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
+#  - mv $PWD/Blattdurchmesser.ino $PWD/ethz-pll-Blattdurchmesser.ino
+  - ls -la
+  - arduino --verify --board arduino:avr:uno $PWD/ethz-pll-Blattdurchmesser.ino
 #notifications:
 #  email:
 #    on_success: change
