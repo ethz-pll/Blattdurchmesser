@@ -17,6 +17,13 @@ $ git clone https://gitlab.ethz.ch/PLL/Blattdurchmesser.git
 $ cd Blattdurchmesser
 $ git remote set-url --add origin https://github.com/ethz-pll/Blattdurchmesser.git
 ```
+you can check the settings with:
+```
+$ git remote -v
+origin  https://gitlab.ethz.ch/PLL/Blattdurchmesser.git (fetch)
+origin  https://gitlab.ethz.ch/PLL/Blattdurchmesser.git (push)
+origin  https://github.com/ethz-pll/Blattdurchmesser.git (push)
+```
 
 ### Enable Travis CI for a Repository (for Arduino)
 https://learn.adafruit.com/continuous-integration-arduino-and-you/testing-your-project
@@ -25,4 +32,6 @@ Login to Travis-CI using the GitHub account and enable Travis-CI for the given r
 
 Add a .travis.yml file to your project, commit, pull/push and enjoy.
 
-This travis file supports Arduino IDE 1.6.5 only we use 1.8.2.
+This travis file supports Arduino IDE 1.8.1 only we use 1.8.2.
+
+Consider using http://inotool.org/ for test also.
