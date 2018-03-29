@@ -2,7 +2,8 @@ language: c
 env:
   global:
     #- ARDUINO_VERSION=1.6.5
-    - ARDUINO_VERSION=1.8.1
+    #- ARDUINO_VERSION=1.8.1
+    - ARDUINO_VERSION=1.8.2
   matrix:
     - BOARD="arduino:avr:uno"
 before_install:
@@ -15,6 +16,7 @@ before_install:
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
   - sudo apt-get install tree
   - sudo pip install ino
+  - sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
 #install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
 #  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
