@@ -23,6 +23,7 @@ script:
   - tree
   #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
   - arduino --verify --board $BOARD --verbose $PWD/Blattdurchmesser.ino
+  - tree /usr/local/share/arduino || true
   - mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
 #notifications:
 #  email:
