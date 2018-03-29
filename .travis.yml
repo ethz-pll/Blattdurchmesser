@@ -15,8 +15,8 @@ before_install:
   - sudo mv arduino-$ARDUINO_VERSION /usr/local/share/arduino
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
   - sudo apt-get install tree
-  - sudo pip install ino
-  - sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
+  #- sudo pip install ino
+  #- sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
 #install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
 #  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
@@ -25,8 +25,7 @@ script:
   - tree
   #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
   - arduino --verify --board $BOARD --verbose $PWD/Blattdurchmesser.ino
-  - tree /usr/local/share/arduino || true
-  - mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
+  #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
 #notifications:
 #  email:
 #    on_success: change
