@@ -24,7 +24,7 @@ script:
   #- ls -la
   - tree
   #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
-  - arduino --verify --board $BOARD --verbose $PWD/Blattdurchmesser.ino
+  - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
   #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
   - tree /tmp
   - find -path "/tmp/arduino_build_*/Blattdurchmesser.ino.elf" || true
