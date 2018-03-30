@@ -27,10 +27,10 @@ script:
   - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
   #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
   - readelf -a `find /tmp/ -name "Blattdurchmesser.ino.elf"`
-  - strings -d `find /tmp/ -name "Blattdurchmesser.ino.elf"` || true
-  - objdump -x `find /tmp/ -name "Blattdurchmesser.ino.elf"` || true
+  - objdump -x `find /tmp/ -name "Blattdurchmesser.ino.elf"`
   #- nm `find /tmp/ -name "Blattdurchmesser.ino.elf"` || true
-  - size `find /tmp/ -name "Blattdurchmesser.ino.elf"` || true
+  - strings -d `find /tmp/ -name "Blattdurchmesser.ino.elf"`
+  - size `find /tmp/ -name "Blattdurchmesser.ino.elf"`
 #notifications:
 #  email:
 #    on_success: change
