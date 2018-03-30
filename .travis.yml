@@ -26,12 +26,12 @@ before_install:
 
 script:
   #- ls -la
-  - tree
   #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
   - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
   #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
 
 after_script:
+  - tree
   - export ELF_FILE=`find /tmp/ -name "Blattdurchmesser.ino.elf"`
   - readelf -a $ELF_FILE
   #- objdump -x $ELF_FILE
