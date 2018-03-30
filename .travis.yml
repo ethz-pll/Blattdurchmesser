@@ -26,9 +26,7 @@ script:
   #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
   - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
   #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
-  - find /tmp/ -name "Blattdurchmesser.ino.elf" || true
-  - ls -la `find /tmp/ -name "Blattdurchmesser.ino.elf"` || true
-  - readelf -a `find /tmp/ -name "Blattdurchmesser.ino.elf"` || true
+  - readelf -a `find /tmp/ -name "Blattdurchmesser.ino.elf"`
 #notifications:
 #  email:
 #    on_success: change
