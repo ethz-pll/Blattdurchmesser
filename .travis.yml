@@ -1,4 +1,5 @@
 language: c
+
 env:
   global:
     #- ARDUINO_VERSION=1.6.5
@@ -6,6 +7,7 @@ env:
     - ARDUINO_VERSION=1.8.2
   matrix:
     - BOARD="arduino:avr:uno"
+
 before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16"
   - sleep 3
@@ -17,21 +19,26 @@ before_install:
   - sudo apt-get install tree
   #- sudo pip install ino
   #- sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
+
 #install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
 #  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
+
 script:
   #- ls -la
   - tree
   #- arduino --verify --board arduino:avr:uno $PWD/Blattdurchmesser.ino
   - arduino --verify --board $BOARD --verbose --preserve-temp-files $PWD/Blattdurchmesser.ino
   #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
+
+after_script:
   - export ELF_FILE=`find /tmp/ -name "Blattdurchmesser.ino.elf"`
   - readelf -a $ELF_FILE
   #- objdump -x $ELF_FILE
   #- nm $ELF_FILE || true
   - strings -d $ELF_FILE
   - size $ELF_FILE
+
 #notifications:
 #  email:
 #    on_success: change
