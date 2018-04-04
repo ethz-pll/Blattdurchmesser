@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/ethz-pll/Blattdurchmesser.svg?branch=master)](https://travis-ci.org/ethz-pll/Blattdurchmesser)
 
+(add build status and images of eagle repo edrc.me run - consider also adding eagle-travis status)
+
 ## Setup
 
 I would like to use features like CI (continous integration) keep a copy/mirror on e.g. github and more.
