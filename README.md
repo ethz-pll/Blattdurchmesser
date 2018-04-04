@@ -34,3 +34,6 @@ https://learn.adafruit.com/continuous-integration-arduino-and-you/testing-your-p
 Login to Travis-CI using the GitHub account and enable Travis-CI for the given repo.
 
 Add a .travis.yml file to your project, commit, pull/push and enjoy.
+
+### Enable EDRC.ME for a Repository (for Eagle)
+See https://gitlab.ethz.ch/PLL/eagle
