@@ -19,9 +19,9 @@
  * Stepper libs:
  * - need; A4988 support, exact step-by-step move, position, non-blocking (FreeRTOS)
  * - nice to have: acceleration
- * - look at https://github.com/laurb9/StepperDriver
+ * - look at https://www.arduino.cc/en/Reference/Stepper (speed, single step - but blocking)
+ *           https://github.com/laurb9/StepperDriver (speed, single step, non-blocking)
  *           https://github.com/waspinator/AccelStepper
- *           https://www.arduino.cc/en/Reference/Stepper
  * - if not available write own or enhance given one
  *
  * OLED lib:
@@ -45,9 +45,10 @@
 #define stepPin    3  // stepper motor control STEP
 #define dirPin     4  // stepper motor control DIR
 
-#define optoPin    2  // optical sensor reading (int possible)
-#define swchPinA   9  // mechanical sensor reading (int possible)
-#define swchPinB  10  // mechanical sensor reading (int possible)
+#define optoPinA   8  // optical sensor reading (int possible?)
+#define optoPinB   2  // optical sensor reading (int possible)
+#define swchPinA   9  // mechanical sensor reading (int possible?)
+#define swchPinB  10  // mechanical sensor reading (int possible?)
 
 #define distpstp 0.004  // 0.004 mm per step
 
@@ -68,8 +69,8 @@ void setup() {
 #endif
   pinMode(stepPin, OUTPUT);
   pinMode(dirPin, OUTPUT);
-  //pinMode(optoPin, INPUT);        // use as interrupt?
-  pinMode(optoPin, INPUT_PULLUP);   // pull-up to allow check for sensor existence
+  //pinMode(optoPinB, INPUT);        // use as interrupt?
+  pinMode(optoPinB, INPUT_PULLUP);   // pull-up to allow check for sensor existence
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(swchPinA, INPUT_PULLUP);  // pull-up to allow check for sensor existence
   pinMode(swchPinB, INPUT_PULLUP);  // pull-up to allow check for sensor existence
@@ -77,15 +78,12 @@ void setup() {
   // System Self-Test
 // TODO: also report errors to OLED as human-readable message
   bool selftest = true;
-  // (test is optical sensor powered?)
-// TODO: use both contacts (closed/open) for self-test as with mechanical switch, see below
-  selftest = selftest && (!digitalRead(optoPin));    // test is optical sensor connected and free?
-  // test is mechanical sensor powered?
+  selftest = selftest && (digitalRead(optoPinA))
+                      && (!digitalRead(optoPinB));   // test is optical sensor powered/connected and free?
   selftest = selftest && (digitalRead(swchPinA)
-                      && (!digitalRead(swchPinB)));  // test is mechanical sensor connected and free?
-  // test are optical and mechanical sensors free?
-  // test is stepper powered?
-  // test is stepper functional?
+                      && (!digitalRead(swchPinB)));  // test is mechanical sensor powered/connected and free?
+// test is stepper powered?
+// test is stepper functional?
 #ifdef SERIAL_OUTPUT
   Serial.println("RUN:");
   Serial.print("System Self-Test: ");
@@ -121,7 +119,7 @@ void loop() {}
   // Sets the two pins as In-/Outputs
   pinMode(stepPin, OUTPUT); 
   pinMode(dirPin, OUTPUT);
-  pinMode(optoPin, INPUT);  // use as interrupt?
+  pinMode(optoPinB, INPUT);  // use as interrupt?
   pinMode(LED_BUILTIN, OUTPUT);
 
   digitalWrite(LED_BUILTIN, HIGH);
@@ -149,7 +147,7 @@ void loop() {}
   // Makes 400 pulses for making two full cycle rotation
   for(int x = 0; x < 4000; x++) {
     delay(2);  // sound becomes very unpleasant with higher values, but accuracy increases
-    if(digitalRead(optoPin) == HIGH) {
+    if(digitalRead(optoPinB) == HIGH) {
       Serial.println(x);
       Serial.println((turns * 200)-x);
       Serial.println(((turns * 200)-x)*0.004*1000);
@@ -187,7 +185,7 @@ void loop() {
   }x/
   delay(1000);
 
-  Serial.println(digitalRead(optoPin));
+  Serial.println(digitalRead(optoPinB));
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
 }
 */
