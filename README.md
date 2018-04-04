@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/ethz-pll/Blattdurchmesser.svg?branch=master)](https://travis-ci.org/ethz-pll/Blattdurchmesser)
+[![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
-(add build status and images of eagle repo edrc.me run - consider also adding eagle-travis status)
+[![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
 ## Setup
 
