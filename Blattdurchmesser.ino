@@ -21,6 +21,7 @@
  * - nice to have: acceleration
  * - look at https://www.arduino.cc/en/Reference/Stepper (speed, single step - but blocking)
  *           https://github.com/laurb9/StepperDriver (speed, single step, non-blocking)
+ *           File > Examples > StepperDriver > BasicStepperDriver also NonBlocking
  *           https://github.com/waspinator/AccelStepper
  * - if not available write own or enhance given one
  *
