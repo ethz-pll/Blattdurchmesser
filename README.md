@@ -45,3 +45,7 @@ See https://gitlab.ethz.ch/PLL/eagle
 * https://help.github.com/articles/3d-file-viewer/
 * https://blog.github.com/2013-04-09-stl-file-viewing/
 * https://blog.github.com/2013-09-17-3d-file-diffs/
+
+### Further Info
+* convert STEP file to .stl online: https://www.makexyz.com/convert/step-to-stl
+* convert Catia file to .stl online: https://www.convertcadfiles.com/de/konvertieren/
