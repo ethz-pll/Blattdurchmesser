@@ -41,3 +41,7 @@ Add a .travis.yml file to your project, commit, pull/push and enjoy.
 
 ### Enable EDRC.ME for a Repository (for Eagle)
 See https://gitlab.ethz.ch/PLL/eagle
+
+### Enable CAD View
+* https://blog.github.com/2013-04-09-stl-file-viewing/
+* https://blog.github.com/2013-09-17-3d-file-diffs/
