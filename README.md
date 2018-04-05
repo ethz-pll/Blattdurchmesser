@@ -1,11 +1,10 @@
 [![Build Status](https://travis-ci.org/ethz-pll/Blattdurchmesser.svg?branch=master)](https://travis-ci.org/ethz-pll/Blattdurchmesser)
 [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
+* https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl
+* ...
+
 [![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
-
-https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl
-
-[![stl-test from github.com](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl)](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl)
 
 ## Setup
 
@@ -42,6 +41,7 @@ Add a .travis.yml file to your project, commit, pull/push and enjoy.
 ### Enable EDRC.ME for a Repository (for Eagle)
 See https://gitlab.ethz.ch/PLL/eagle
 
-### Enable CAD View
+### Enable CAD View (for Catia)
+* https://help.github.com/articles/3d-file-viewer/
 * https://blog.github.com/2013-04-09-stl-file-viewing/
 * https://blog.github.com/2013-09-17-3d-file-diffs/
