@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/ethz-pll/Blattdurchmesser.svg?branch=master)](https://travis-ci.org/ethz-pll/Blattdurchmesser)
 [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
-[more...](https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/status.html)
+[full...](https://rawgit.com/ethz-pll/Blattdurchmesser/master/status.html)
 
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl
   ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl))
