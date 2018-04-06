@@ -49,9 +49,22 @@
 
 #define distpstp 0.004  // 0.004 mm per step
 
+//------------------------------------------------------------------------------
+
+#include <Wire.h>
+#include "SSD1306Ascii.h"
+#include "SSD1306AsciiWire.h"
+
+// 0X3C+SA0 - 0x3C or 0x3D
+#define I2C_ADDRESS 0x3C
+
+SSD1306AsciiWire oled;
+
+//------------------------------------------------------------------------------
+
 void setup() {
   // Init/Setup
-  // Define/Configure pins as input, output, etc.
+  // Configure serial interface
 #ifdef SERIAL_OUTPUT
   Serial.begin(9600);
 
@@ -64,6 +77,19 @@ void setup() {
   Serial.println(__VERSION__); // gcc version
   Serial.println(__FILE__); // file compiled
 #endif
+
+  // Configure wire (i2c) and oled interfaces
+  Wire.begin();
+  Wire.setClock(400000L);
+
+  oled.begin(&Adafruit128x64, I2C_ADDRESS);
+  oled.setFont(System5x7);
+  oled.clear();
+//  oled.set2X();
+//  oled.set1X();
+  oled.println("\"Blattdurchmesser\"");
+
+  // Define/Configure pins as input, output, etc.
   pinMode(stepPin, OUTPUT);
   pinMode(dirPin, OUTPUT);
   //pinMode(optoPinB, INPUT);        // use as interrupt?
@@ -83,9 +109,16 @@ void setup() {
 // test is stepper functional?
 #ifdef SERIAL_OUTPUT
   Serial.println("RUN:");
+#endif
+  oled.println("RUN:");
+#ifdef SERIAL_OUTPUT
   Serial.print("System Self-Test: ");
+#endif
+  oled.print("System Self-Test: ");
+#ifdef SERIAL_OUTPUT
   Serial.println(selftest);
 #endif
+  oled.println(selftest);
 
   // Check current status and decide what to do as next step
   // - ...
@@ -102,6 +135,8 @@ void setup() {
   digitalWrite(LED_BUILTIN, HIGH);  // LED on
   delay(500);
   digitalWrite(LED_BUILTIN, LOW);   // LED off
+
+  oled.println("READY...");
 }
 void loop() {}
 /*
