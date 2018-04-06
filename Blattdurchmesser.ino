@@ -33,10 +33,6 @@
  * PCB:
  * - Arduino UNO eagle footprint
  *   https://github.com/adafruit/Adafruit-Eagle-Library
- * Schema:
- * - idee hansjakob nur software gesteuerte sicherheit (1 mikroschalter)
- * - idee ursin relais um stromlos zu machen auch auf pcb vorsehen/einbauen
- *   (beides ideen auf print; nutzung idee ursin optional - bestücken und verdrahten)
  *
  */
 

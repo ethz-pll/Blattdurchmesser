@@ -2,18 +2,18 @@ Bezeichnung;Laden;Art.-Nr.;Preis;Anzahl;
 ;;;;;
 Original Arduino Uno R3 (Atmega328) *RETAIL*;www.play-zone.ch;;28.90;1;
 A4988 Stepper Driver Modul;www.play-zone.ch;;8.90;1;bei www.distrelec.ch CHF 30.35 / bei www.3dware.ch CHF 4.20
-OLED Modul 128 x 64 Pixel, I2C, Weiss, 0.96 inch, SSD1306;www.play-zone.ch;;14.90;1;welcher? SSD1306 oder ?
-"OLED Modul 1.3"" / 128 x 64 Pixel, I2C, Weiss, SH1106";www.play-zone.ch;;18.90;1;? SH1106? welchen habe ich hier? Siehe auch https://forum.arduino.cc/index.php?topic=256374.0
+OLED Modul 128 x 64 Pixel, I2C, Weiss, 0.96 inch, SSD1306;www.play-zone.ch;;14.90;1;welcher? SSD1306 oder Ö
+"OLED Modul 1.3"" / 128 x 64 Pixel, I2C, Weiss, SH1106";www.play-zone.ch;;18.90;1;Ö SH1106? welchen habe ich hier? Siehe auch https://forum.arduino.cc/index.php?topic=256374.0
 ;;;;;
-Stepper Motor, 200 step, DC 8.64V, 0.24A;FIRST-Lab;;(ca. 25.00);1;Betrieben mit 12V (mehr Drehmoment, weniger blockieren) - KÅhlung??
-Profil-System (Item, Kanya, etc.) Profil 40 x 40 x 100 mm;FIRST-Lab;;;1;Was fÅr System haben wir verwendet?
+Stepper Motor, 200 step, DC 8.64V, 0.24A;FIRST-Lab;;(ca. 25.00);1;Betrieben mit 12V (mehr Drehmoment, weniger blockieren) - K¸hlung??
+Profil-System (Item, Kanya, etc.) Profil 40 x 40 x 100 mm;FIRST-Lab;;;1;Was f¸r System haben wir verwendet?
 Verbindung Stepper Motor zu Profil-System, blau, H.J. Rusterholz;FIRST-Lab;3D-Druck;;1;
 Spindel M5 x 100mm, 0.8mm/Umdrehung;FIRST-Lab;;;1;
 Bronze-Buchse M5;FIRST-Lab;;;1;
 Leuchtenklemmen, 6mm2;lager.phys.ethz.ch;30067.6;1.79;1;welche Kupplung?
 Stellringe, 3, 7, M2;lager.phys.ethz.ch;20247.2;0.43;2;welche Kupplung?
-PVC-SchlÑuche, 2, 4;lager.phys.ethz.ch;40001.1;0.37;15 mm;welche Kupplung?
-KÅhlkîrper, Typ FK 214/SA CB, 15 K/W;lager.phys.ethz.ch;30049.4;0.64;3;
+PVC-Schl‰uche, 2, 4;lager.phys.ethz.ch;40001.1;0.37;15 mm;welche Kupplung?
+K¸hlkˆrper, Typ FK 214/SA CB, 15 K/W;lager.phys.ethz.ch;30049.4;0.64;3;
 Kupplungen/Klaue/Nabenklemmung mit Passfedernut: https://de.misumi-ec.com/vona2/detail/110300125940/;;;;;welche Kupplung?
 Wellenkupplung: http://forums.reprap.org/read.php?246,280197;;;;;
 Kardan: https://de.aliexpress.com/item/5pcs-Cross-universal-joint-drive-shaft-axle-coupling-metal-connector-diy-toy-accessories-technology-model-parts/32827812832.html;;;;;
@@ -21,16 +21,16 @@ Drehstarre Kupplung: http://shop.myhobby-cnc.de/bauteile/mechanische-bauteile/kl
 ROTEX Kupplung KTR Rotex 28: http://www.maschinenteil24.de/Mechanik/Mechanische-Baugruppen/Kupplungen/Kupplung-KTR-Rotex-28.html;;;;;
 Kardan: https://de.aliexpress.com/item/5pcs-Cross-universal-joint-drive-shaft-axle-coupling-metal-connector-diy-toy-accessories-technology-model-parts/32827812832.html;;;;;
 Starre Kupplungen: http://www.directindustry.de/industrie-hersteller/starre-kupplung-61105.html;;;;;
-Vermeidung von KupplungsausfÑllen: http://deutsch.ruland.com/a_articles_avoid_coup_failure_de.asp;;;;;
+Vermeidung von Kupplungsausf‰llen: http://deutsch.ruland.com/a_articles_avoid_coup_failure_de.asp;;;;;
 ;;;;;
 Gabellichtschranke, PM-T64, Panasonic;www.distrelec.ch;300-38-924;18.36;1;
-Konfektioniertes Kabel, 2 m, 3.7 mm, 0.2 mm˝ 4-Core, CN-14A-C2, Panasonic;www.distrelec.ch;300-38-891;8.37;1;
+Konfektioniertes Kabel, 2 m, 3.7 mm, 0.2 mm≤ 4-Core, CN-14A-C2, Panasonic;www.distrelec.ch;300-38-891;8.37;1;
 Relais, TX2-5V, Panasonic;www.distrelec.ch;137-10-935;3.51;1;
 Miniatur-Mikroschalter, mit Hebel;lager.phys.ethz.ch;30167.2;8.74;;
 ;;;;;
 "Schlitten PTFE: ""Catia\Saegeblatt_Schlitten.pdf""";(Lehr-)Werkstatt;;;1;
-"Anschlag Al: ""Catia\Saegeblatt_Anschlag.pdf""";(Lehr-)Werkstatt;;;1;besser SS? wegen Verschleiss??
+"Anschlag Al: ""Catia\Saegeblatt_Anschlag.pdf""";(Lehr-)Werkstatt;;;1;besser SS? wegen VerschleissÖ?
 "Endplatte Al: ""Catia\Saegeblatt_Endplatte.pdf""";(Lehr-)Werkstatt;;;1;
 ;;;;;
 ;;;;;
-"Kostenstelle ist 2205, Vermerk ""WafersÑge""";;;;;
+"Kostenstelle ist 2205, Vermerk ""Wafers‰ge""";;;;;
