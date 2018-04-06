@@ -20,7 +20,7 @@ before_install:
   #- sudo pip install ino
   #- sudo ln -s /usr/local/share/arduino/hardware/arduino/avr/boards.txt /usr/local/share/arduino/hardware/arduino/boards.txt
 
-#install:
+install:
 #  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_FONA
 #  - arduino --install-library "Adafruit SleepyDog Library,Adafruit MQTT Library"
   - arduino --install-library "SSD1306Ascii"
