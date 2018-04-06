@@ -45,9 +45,10 @@
 #define optoPin     A0   // may be use both digital and analog pin (for int.)
 #define swchPin     9
 // OLED on I2C pins SCL, SDA
-#define TOL_LOW     ?  // < 0.5 mm tolerance ...
-#define TOL_HIGH    ?  //
 */
+#define TOL_LOW       -1  // < 0.5 mm tolerance ...
+#define TOL_HIGH      -1  //
+#define START_BUTTON  -1
 
 // defines pins numbers
 #define stepPin    3  // stepper motor control STEP
@@ -174,154 +175,7 @@ void setup() {
 }
 
 void loop() {
-  // wait for "Start" button (has pull-up on port)
-// TODO: #define START_BUTTON
-// TODO: add "Start" and "Reset" buttons
-//  while (digitalRead(START_BUTTON) == HIGH) {};
-
-  oled.clear();
-  oled.println("Init in Progress");
-  oled.println("Please wait...");
-
-/*
-// TODO: Besprechen mit HJ; kann nach meiner init Prozedur gar nicht sein
-//     + -> Fehler tritt davor auf in setup() bei Init auf
-//   ! - -> kann NICHT selbst versuchen durch -Fahrt Fehler zu beheben
-  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
-    // move 5mm in -dir
-    // ...
-    if (digitalRead(swchPinB) == HIGH) {  // mech sw pressed?
-      // ERROR: Axis blocked or reference switch defect!
-      // Please restart machine or call for assistance!
-      while (true) {};  // "Ende"; loop for ever
-    }
-  }
-
-  // move to reference mech sw in +dir an store position
-// TODO: Besprechen mit HJ; "Endschalter: Mechanischer Microswitch NO" -> "NO" ??
-  // ...
-
-// TODO: Besprechen mit HJ; kann nach meiner init Prozedur gar nicht sein
-//     + -> Fehler tritt davor auf in setup() bei Init auf
-//   ! - -> kann NICHT selbst versuchen durch -Fahrt Fehler zu beheben
-// TODO: Besprechen mit HJ; STOP == Ende?
-// TODO: Besprechen mit HJ; Wie kann Min/Max des optischen sensors gemessen werden?
-// TODO: Consider using analog reading to increase photo sensor precission!!
-  if (digitalRead(optoPinB) == HIGH) {    // opt sw triggered?
-//  if (analogRead(optoPinB) >= 614) {      // opt sw triggered? 60% of 1023
-    // ERROR: Photo sensor blocked or defect!
-    // Please restart machine or call for assistance!
-    while (true) {};    // "STOP"; loop for ever
-  }
-
-  // move to reference opt sw in -dir and store position
-  // ...
-
-  if (!((TOL_LOW < dist) && (dist < TOL_HIGH))) {
-    // ERROR: Measurement area blocked!
-    // Remove all parts and press \"Start\"
-    return;
-  }
-
-  // move to reference opt sw in -dir and store position
-  // for a 2nd time (5 mm)
-// TODO: tolerance for difference of reference values? compare reference values?
-// TODO: Besprechen mit HJ; macht das Sinn?
-//   ? - -> wie sollte denn auf Fehler reagiert werden?
-  // ...
-
-  // 2 values!
-  if (!((TOL_LOW < dist) && (dist < TOL_HIGH))) {
-    // ERROR: Optical switch not in tolerance!
-    // Initialize again by pressing \"Start\"
-    return;
-  }
-
-  // zero axis - position tracking
-// TODO: how precise is position tracking?
-  // ...
-
-  // fast move in +dir to waiting position (~1 mm before mech. sw.)
-// TODO: stop closer to dicing blade? (see next step also)
-  // ...
-
-// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
-//   +/- -> Fehler tritt nie auf
-//   ? - -> wie sollte denn auf Fehler reagiert werden?
-  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
-    // ERROR: End switch pressed!
-    // Initialize again by pressing \"Start\"
-    return;
-  }
-
-  oled.clear();
-  oled.println("Ready: Place dicing blade");
-  oled.println("and press \"Start\"");
-
-// TODO: "DB" with pre-selectable dicing blades (diameter, tolerance during use) from SD card, with multi-switch
-
-// GOTO1
-
-  // wait for "Start" button (has pull-up on port)
-  while (digitalRead(START_BUTTON) == HIGH) {};
-
-// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
-//   +/- -> Fehler tritt nie auf
-//   ? - -> wie sollte denn auf Fehler reagiert werden?
-  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
-    // ERROR: End switch pressed!
-    // Initialize again by pressing \"Start\"
-    return;
-  }
-
-  // move to reference opt sw in -dir and store position
-  // do this 3 times - go back in +dir ~3 mm each time
-  // ...
-
-  // 3 values!
-  if (!((TOL_LOW < dist) && (dist < TOL_HIGH))) {
-    // ERROR: Measurement not in tolerance!
-    // Reinsert dicing blade and press \"Start\"
-
-    // fast move in +dir to waiting position (~1 mm before mech. sw.)
-    // ...
-
-// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
-//   +/- -> Fehler tritt nie auf
-//   ? - -> wie sollte denn auf Fehler reagiert werden?
-    if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
-      // ERROR: End switch pressed!
-      // Initialize again by pressing \"Start\"
-      return;
-    } else {
-      // GOTO1
-    }
-  }
-
-  // calculate diameter, see drawing
-  // ...
-
-  oled.print("Diameter: ");
-  oled.print(diameter);
-  oled.println(" mm");
-  oled.println("Press \"Start\" for");
-  oled.println("the next measurement");
-
-  // fast move in +dir to waiting position (~1 mm before mech. sw.)
-  // ...
-
-// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
-//   +/- -> Fehler tritt nie auf
-//   ? - -> wie sollte denn auf Fehler reagiert werden?
-  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
-    // ERROR: End switch pressed!
-    // Initialize again by pressing \"Start\"
-    return;
-  } else {
-    // GOTO1
-  }
-*/
-
+  measurement();
 
 /*
 
@@ -375,13 +229,14 @@ void loop() {
     digitalWrite(stepPin,LOW);
     delayMicroseconds(500);
   }
-x/
+
 
   digitalWrite(LED_BUILTIN, LOW);
+*/
 }
 
-void loop() {
-/*  digitalWrite(dirPin,HIGH); // Enables the motor to move in a particular direction
+/*void loop() {
+  digitalWrite(dirPin,HIGH); // Enables the motor to move in a particular direction
   // Makes 200 pulses for making one full cycle rotation
   for(int x = 0; x < 200; x++) {
     digitalWrite(stepPin,HIGH); 
@@ -403,4 +258,162 @@ void loop() {
 
   Serial.println(digitalRead(optoPinB));
   digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
-*/}
+
+}*/
+
+void measurement() {
+  init_measurement();
+  while (!run_measurement()) {};
+}
+
+void init_measurement() {
+  // wait for "Start" button (has pull-up on port)
+// TODO: #define START_BUTTON
+// TODO: add "Start" and "Reset" buttons
+  while (digitalRead(START_BUTTON) == HIGH) {};
+
+  oled.clear();
+  oled.println("Init in Progress");
+  oled.println("Please wait...");
+
+return;
+
+// TODO: Besprechen mit HJ; kann nach meiner init Prozedur gar nicht sein
+//     + -> Fehler tritt davor auf in setup() bei Init auf
+//   ! - -> kann NICHT selbst versuchen durch -Fahrt Fehler zu beheben
+  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
+    // move 5mm in -dir
+    // ...
+    if (digitalRead(swchPinB) == HIGH) {  // mech sw pressed?
+      // ERROR: Axis blocked or reference switch defect!
+      // Please restart machine or call for assistance!
+      while (true) {};  // "Ende"; loop for ever
+    }
+  }
+
+  // move to reference mech sw in +dir an store position
+// TODO: Besprechen mit HJ; "Endschalter: Mechanischer Microswitch NO" -> "NO" ??
+  // ...
+
+// TODO: Besprechen mit HJ; kann nach meiner init Prozedur gar nicht sein
+//     + -> Fehler tritt davor auf in setup() bei Init auf
+//   ! - -> kann NICHT selbst versuchen durch -Fahrt Fehler zu beheben
+// TODO: Besprechen mit HJ; STOP == Ende?
+// TODO: Besprechen mit HJ; Wie kann Min/Max des optischen sensors gemessen werden?
+// TODO: Consider using analog reading to increase photo sensor precission!!
+  if (digitalRead(optoPinB) == HIGH) {    // opt sw triggered?
+//  if (analogRead(optoPinB) >= 614) {      // opt sw triggered? 60% of 1023
+    // ERROR: Photo sensor blocked or defect!
+    // Please restart machine or call for assistance!
+    while (true) {};    // "STOP"; loop for ever
+  }
+
+  // move to reference opt sw in -dir and store position
+  // ...
+  float dist;
+  if (!((TOL_LOW < dist) && (dist < TOL_HIGH))) {
+    // ERROR: Measurement area blocked!
+    // Remove all parts and press \"Start\"
+    return;
+  }
+
+  // move to reference opt sw in -dir and store position
+  // for a 2nd time (5 mm)
+// TODO: tolerance for difference of reference values? compare reference values?
+// TODO: Besprechen mit HJ; macht das Sinn?
+//   ? - -> wie sollte denn auf Fehler reagiert werden?
+  // ...
+
+  // 2 values!
+  if (!((TOL_LOW < dist) && (dist < TOL_HIGH))) {
+    // ERROR: Optical switch not in tolerance!
+    // Initialize again by pressing \"Start\"
+    return;
+  }
+
+  // zero axis - position tracking
+// TODO: how precise is position tracking?
+  // ...
+
+  // fast move in +dir to waiting position (~1 mm before mech. sw.)
+// TODO: stop closer to dicing blade? (see next step also)
+  // ...
+
+// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
+//   +/- -> Fehler tritt nie auf
+//   ? - -> wie sollte denn auf Fehler reagiert werden?
+  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
+    // ERROR: End switch pressed!
+    // Initialize again by pressing \"Start\"
+    return;
+  }
+
+  oled.clear();
+  oled.println("Ready: Place dicing blade");
+  oled.println("and press \"Start\"");
+
+// TODO: "DB" with pre-selectable dicing blades (diameter, tolerance during use) from SD card, with multi-switch
+}
+
+bool run_measurement() {
+  // wait for "Start" button (has pull-up on port)
+  while (digitalRead(START_BUTTON) == HIGH) {};
+
+// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
+//   +/- -> Fehler tritt nie auf
+//   ? - -> wie sollte denn auf Fehler reagiert werden?
+  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
+    // ERROR: End switch pressed!
+    // Initialize again by pressing \"Start\"
+    return true;
+  }
+
+  // move to reference opt sw in -dir and store position
+  // do this 3 times - go back in +dir ~3 mm each time
+  // ...
+
+  // 3 values!
+  float dist;
+  if (!((TOL_LOW < dist) && (dist < TOL_HIGH))) {
+    // ERROR: Measurement not in tolerance!
+    // Reinsert dicing blade and press \"Start\"
+
+    // fast move in +dir to waiting position (~1 mm before mech. sw.)
+    // ...
+
+// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
+//   +/- -> Fehler tritt nie auf
+//   ? - -> wie sollte denn auf Fehler reagiert werden?
+    if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
+      // ERROR: End switch pressed!
+      // Initialize again by pressing \"Start\"
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // calculate diameter, see drawing
+  float diameter;
+  // ...
+
+  oled.print("Diameter: ");
+  oled.print(diameter);
+  oled.println(" mm");
+  oled.println("Press \"Start\" for");
+  oled.println("the next measurement");
+
+  // fast move in +dir to waiting position (~1 mm before mech. sw.)
+  // ...
+
+// TODO: Besprechen mit HJ; kann je nach waiting position im Schritt vorher gar nicht sein
+//   +/- -> Fehler tritt nie auf
+//   ? - -> wie sollte denn auf Fehler reagiert werden?
+  if (digitalRead(swchPinB) == HIGH) {    // mech sw pressed?
+    // ERROR: End switch pressed!
+    // Initialize again by pressing \"Start\"
+    return true;
+  } else {
+    return false;
+  }
+}
