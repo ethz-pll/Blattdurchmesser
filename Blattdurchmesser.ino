@@ -99,12 +99,17 @@ void setup() {
   pinMode(swchPinB, INPUT_PULLUP);  // pull-up to allow check for sensor existence
 
   // System Self-Test
-// TODO: also report errors to OLED as human-readable message
   bool selftest = true;
   selftest = selftest && (digitalRead(optoPinA))
                       && (!digitalRead(optoPinB));   // test is optical sensor powered/connected and free?
+  if (!selftest) {
+    oled.println("E: opt sw");
+  }
   selftest = selftest && (digitalRead(swchPinA)
                       && (!digitalRead(swchPinB)));  // test is mechanical sensor powered/connected and free?
+  if (!selftest) {
+    oled.println("E: mech sw");
+  }
 // test is stepper powered?
 // test is stepper functional?
 #ifdef SERIAL_OUTPUT
@@ -122,21 +127,30 @@ void setup() {
 
   // Check current status and decide what to do as next step
   // - ...
+  if (selftest) {  // System Init, Self-Test and ... SUCCESSFUL
+    // blink 3 times
+    digitalWrite(LED_BUILTIN, HIGH);  // LED on
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);   // LED off
+    delay(500);
+    digitalWrite(LED_BUILTIN, HIGH);  // LED on
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);   // LED off
+    delay(500);
+    digitalWrite(LED_BUILTIN, HIGH);  // LED on
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);   // LED off
 
-  // System Init, Self-Test and ... SUCCESSFUL: blink 3 times
-  digitalWrite(LED_BUILTIN, HIGH);  // LED on
-  delay(500);
-  digitalWrite(LED_BUILTIN, LOW);   // LED off
-  delay(500);
-  digitalWrite(LED_BUILTIN, HIGH);  // LED on
-  delay(500);
-  digitalWrite(LED_BUILTIN, LOW);   // LED off
-  delay(500);
-  digitalWrite(LED_BUILTIN, HIGH);  // LED on
-  delay(500);
-  digitalWrite(LED_BUILTIN, LOW);   // LED off
+    oled.println("READY...");
+  } else {         // System Init, Self-Test and ... FAILED
+    digitalWrite(LED_BUILTIN, HIGH);  // LED on
 
-  oled.println("READY...");
+    oled.println("ERROR: STOP!");
+    while (true) {};  // loop for ever
+  }
+
+  delay(3000);
+  oled.clear();
 }
 void loop() {}
 /*
