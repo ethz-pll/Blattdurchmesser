@@ -1,9 +1,16 @@
 [![Build Status](https://travis-ci.org/ethz-pll/Blattdurchmesser.svg?branch=master)](https://travis-ci.org/ethz-pll/Blattdurchmesser)
 [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/status.svg)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
+[more...](https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/status.html)
+
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl
   ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl))
-* ...
+* https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Anschlag.stl
+  ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Anschlag.stl))
+* https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Endplatte.stl
+  ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Endplatte.stl))
+* https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl
+  ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl))
 
 [![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 
