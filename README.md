@@ -25,7 +25,7 @@ PCB: ![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/et
 https://gitlab.ethz.ch/PLL/eagle
 
 ![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)[...](https://edrc.me/g/drtrigon/ethz-pll-eagle)
-<!--![projects/Blattdurchmesser/Blattdurchmesser.png](https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png)--><img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png" width="600">
+<img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png" width="600">
 [...](https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png)
 * GERBER: https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.zip
 * partlist: https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.txt
@@ -44,20 +44,10 @@ CAD:
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl
   ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl))
 
-[comment]: # (@htmlonly
-    <table>
-      <tr>
-        <td>
-          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/40%20mm%20Aluprofil%20v13.stl"></script><br>
-          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Anschlag.stl"></script><br>
-          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Endplatte.stl"></script><br>
-          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Schlitten.stl"></script><br>
-        </td>
-      </tr>
-    </table>
-@endhtmlonly)
-
-([details...](https://rawgit.com/ethz-pll/Blattdurchmesser/master/status.html))
+<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/40%20mm%20Aluprofil%20v13.stl"></script><br>
+<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Anschlag.stl"></script><br>
+<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Endplatte.stl"></script><br>
+<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Schlitten.stl"></script><br>
 
 #### changelog pcb (eagle)
 

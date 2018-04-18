@@ -53,7 +53,7 @@ after_script:
   - git config user.email 'travis@travis-ci.org'
   - git config user.name 'Travis CI'
   - git commit --message "Travis build $TRAVIS_BUILD_NUMBER"
-  - git push -f https://$GIT_USER:$GIT_PASS@github.com/drtrigon/sketchbook.git result/docu  # dangerous; overwrite remote branch!
+  - git push -f https://$GIT_USER:$GIT_PASS@github.com/ethz-pll/Blattdurchmesser.git result/docu  # dangerous; overwrite remote branch!
   - tree
 
 #notifications:
