@@ -44,6 +44,7 @@ CAD:
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl
   ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl))
 
+@htmlonly
     <table>
       <tr>
         <td>
@@ -54,6 +55,7 @@ CAD:
         </td>
       </tr>
     </table>
+@endhtmlonly
 
 #### changelog pcb (eagle)
 
