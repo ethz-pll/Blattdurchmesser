@@ -1,5 +1,10 @@
 language: c
 
+# blocklist
+branches:
+  except:
+  - result/docu
+
 env:
   global:
     #- ARDUINO_VERSION=1.6.5
@@ -32,13 +37,24 @@ script:
   #- mkdir $PWD/src && ln -s $PWD/Blattdurchmesser.ino $PWD/src/sketch.ino && ino build -m uno && readelf -a $PWD/.build/uno/firmware.elf || true
 
 after_script:
-  - tree
   - export ELF_FILE=`find /tmp/ -name "Blattdurchmesser.ino.elf"`
   - readelf -a $ELF_FILE
   #- objdump -x $ELF_FILE
   #- nm $ELF_FILE || true
   - strings -d $ELF_FILE
   - size $ELF_FILE
+  # doxygen docu generation
+  - doxygen Doxyfile
+  #- pushd $PWD/doc/latex/; make; popd
+  # push result back to git repo
+  - git checkout -b result/docu
+  - git add $PWD/doc/
+  - git status
+  - git config user.email 'travis@travis-ci.org'
+  - git config user.name 'Travis CI'
+  - git commit --message "Travis build $TRAVIS_BUILD_NUMBER"
+  - git push -f https://$GIT_USER:$GIT_PASS@github.com/drtrigon/sketchbook.git result/docu  # dangerous; overwrite remote branch!
+  - tree
 
 #notifications:
 #  email:
