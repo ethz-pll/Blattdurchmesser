@@ -44,10 +44,16 @@ CAD:
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl
   ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl))
 
-<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/40%20mm%20Aluprofil%20v13.stl"></script><br>
-<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Anschlag.stl"></script><br>
-<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Endplatte.stl"></script><br>
-<script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Schlitten.stl"></script><br>
+    <table>
+      <tr>
+        <td>
+          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/40%20mm%20Aluprofil%20v13.stl"></script><br>
+          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Anschlag.stl"></script><br>
+          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Endplatte.stl"></script><br>
+          <script src="https://embed.github.com/view/3d/ethz-pll/Blattdurchmesser/master/Catia/Saegeblatt_Schlitten.stl"></script><br>
+        </td>
+      </tr>
+    </table>
 
 #### changelog pcb (eagle)
 
