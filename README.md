@@ -44,7 +44,7 @@ CAD:
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl
   ([github](https://github.com/ethz-pll/Blattdurchmesser/blob/master/Catia/Saegeblatt_Schlitten.stl))
 
-partlist: https://rawgit.com/ethz-pll/Blattdurchmesser/blob/master/Materialliste.htm
+partlist: https://rawgit.com/ethz-pll/Blattdurchmesser/master/Materialliste.htm
 
 [comment]: # (@htmlonly
     <table>
