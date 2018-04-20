@@ -10,9 +10,9 @@ PCB: [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/e
 https://gitlab.ethz.ch/PLL/eagle
 
 [![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
-[![projects/Blattdurchmesser/Blattdurchmesser.png](https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png)](https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png)
-* GERBER: https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.zip
-* partlist: https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.txt
+[![projects/Blattdurchmesser/Blattdurchmesser.png](https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png)](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png)
+* GERBER: https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.zip
+* partlist: https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.txt
 -->
 docu: ![doxygen html](https://raw.githubusercontent.com/ethz-pll/Blattdurchmesser/result/docu/doc/html/doxygen.png)[...](https://rawgit.com/ethz-pll/Blattdurchmesser/result/docu/doc/html/index.html)
 
@@ -25,14 +25,14 @@ PCB: ![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/et
 https://gitlab.ethz.ch/PLL/eagle
 
 ![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)[...](https://edrc.me/g/drtrigon/ethz-pll-eagle)
-<img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png" width="600">
-[...](https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.png)
-* GERBER: https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.zip
-* partlist: https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.txt
+<img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png" width="600">
+[...](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png)
+* GERBER: https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.zip
+* partlist: https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.txt
 
-https://github.com/drtrigon/ethz-pll-eagle/tree/result/travis/projects/Blattdurchmesser logs:
-* https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.gpi
-* https://github.com/drtrigon/ethz-pll-eagle/blob/result/travis/projects/Blattdurchmesser/Blattdurchmesser.dri
+https://github.com/drtrigon/ethz-pll-eagle/tree/result/pcb/projects/Blattdurchmesser logs:
+* https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.gpi
+* https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.dri
 
 CAD: 
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl
