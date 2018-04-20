@@ -9,10 +9,18 @@ PCB: [![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/e
 [![GERBER Build Status](https://travis-ci.org/drtrigon/ethz-pll-eagle.svg?branch=master)](https://travis-ci.org/drtrigon/ethz-pll-eagle)
 https://gitlab.ethz.ch/PLL/eagle
 
+[![projects/Blattdurchmesser/Blattdurchmesser_sch.png](https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_sch.png)](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_sch.png)
+
 [![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 [![projects/Blattdurchmesser/Blattdurchmesser.png](https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png)](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png)
 * GERBER: https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.zip
 * partlist: https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.txt
+
+https://github.com/drtrigon/ethz-pll-eagle/tree/result/pcb/projects/Blattdurchmesser logs:
+* https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.gpi
+* https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.dri
+
+[![projects/Blattdurchmesser/Blattdurchmesser_auto.png](https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_auto.png)](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_auto.png)
 -->
 docu: ![doxygen html](https://raw.githubusercontent.com/ethz-pll/Blattdurchmesser/result/docu/doc/html/doxygen.png)[...](https://rawgit.com/ethz-pll/Blattdurchmesser/result/docu/doc/html/index.html)
 
@@ -24,6 +32,9 @@ PCB: ![design rule check status](https://edrc.me/api/v1/user/drtrigon/project/et
 ![GERBER Build Status](https://travis-ci.org/drtrigon/ethz-pll-eagle.svg?branch=master)[...](https://travis-ci.org/drtrigon/ethz-pll-eagle)
 https://gitlab.ethz.ch/PLL/eagle
 
+<img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_sch.png" width="600">
+[...](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_sch.png)
+
 ![projects/Blattdurchmesser/Blattdurchmesser.brd from EDRC.me](https://edrc.me/api/v1/user/drtrigon/project/ethz-pll-eagle/img/file/projects%2FBlattdurchmesser%2FBlattdurchmesser.png?ref=refs%2Fheads%2Fmaster)[...](https://edrc.me/g/drtrigon/ethz-pll-eagle)
 <img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png" width="600">
 [...](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.png)
@@ -33,6 +44,9 @@ https://gitlab.ethz.ch/PLL/eagle
 https://github.com/drtrigon/ethz-pll-eagle/tree/result/pcb/projects/Blattdurchmesser logs:
 * https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.gpi
 * https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser.dri
+
+<img src="https://raw.githubusercontent.com/drtrigon/ethz-pll-eagle/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_auto.png" width="600">
+[...](https://github.com/drtrigon/ethz-pll-eagle/blob/result/pcb/projects/Blattdurchmesser/Blattdurchmesser_auto.png)
 
 CAD: 
 * https://gitlab.ethz.ch/PLL/Blattdurchmesser/blob/master/Catia/40%20mm%20Aluprofil%20v13.stl
@@ -109,6 +123,12 @@ See https://gitlab.ethz.ch/PLL/eagle
 * https://blog.github.com/2013-04-09-stl-file-viewing/
 * https://blog.github.com/2013-09-17-3d-file-diffs/
 
+#### Create CAD (.stl) Designs online easily
+See https://www.tinkercad.com/
+
 ### Further Info
 * convert STEP file to .stl online: https://www.makexyz.com/convert/step-to-stl
 * convert Catia file to .stl online: https://www.convertcadfiles.com/de/konvertieren/
+* add doxygen to repository
+  * The Well-Automated Arduino Library - Adafruit Learning System: https://learn.adafruit.com/the-well-automated-arduino-library/doxygen
+  * https://stackoverflow.com/questions/35500277/doxygen-for-ino-files-arduino
